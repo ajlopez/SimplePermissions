@@ -40,3 +40,17 @@ assert.ok(context.hasValues({ country: 'Japan', application: 'Accounting' }));
 
 assert.equal(context.hasValues({ application: 'Sales' }), false);
 assert.equal(context.hasValues({ country: 'Canada' }), false);
+
+// Get Empty Subject Roles
+
+var result = context.getSubjectRoles('adam');
+assert.ok(result);
+assert.equal(result.length, 0);
+
+// Add Role and Get Roles
+
+context.addSubjectRole('adam', 'accountant');
+var result = context.getSubjectRoles('adam');
+assert.ok(result);
+assert.equal(result.length, 1);
+assert.equal(result[0], 'accountant');

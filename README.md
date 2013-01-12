@@ -77,6 +77,16 @@ permissions.forEach(function (permission) { console.log(permission); });
 ```
 The returned value is an array with the permission values. If no permission was granted, the empty array `[]` is returned.
 
+Add a role to a subject in a context:
+```js
+subjects.addRole('adam', 'accountant', { application: 'Accounting' });
+```
+Get roles of a subject in context:
+```js
+var adamroles = subjects.getRoles('adam', { application: 'Accounting' });
+```
+The returned value is an array with the subject roles for that context. If no roles as assigned to that context, the empty array `[]` is returned.
+
 ## Persistence?
 
 Persistence is an orthogonal problem. You must reify the engine from your persistence store, and update their values.
