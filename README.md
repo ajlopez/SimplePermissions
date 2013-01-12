@@ -112,7 +112,6 @@ TBD
 - Revoke permissions
 - Remove permissions
 - Better context organization and retrieval, to support thousands of values
-- Roles assigned to Subjects by Context
 - Permissions inherited by Context
 
 ## Versions
