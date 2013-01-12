@@ -41,9 +41,12 @@ subjects.grantPermission(subjectId, permission(s), context);
 
 Examples:
 ```js
-subjects.grantPermission('adam', 'create account', { application: 'Accounting' });
-subjects.grantPermission('alice', 'print invoice', { application: 'Sales', country: 'Argentina' });
-subjects.grantPermission('albert', ['create order', 'print order'], { application: 'Purchases', country: 'Australia' });
+subjects.grantPermission('adam', 'create account', 
+    { application: 'Accounting' });
+subjects.grantPermission('alice', 'print invoice', 
+    { application: 'Sales', country: 'Argentina' });
+subjects.grantPermission('albert', ['create order', 'print order'], 
+    { application: 'Purchases', country: 'Australia' });
 ```
 
 Retrieve subject granted permissions in a context:
@@ -59,9 +62,12 @@ roles.grantPermission(roleId, permission(s), context);
 
 Examples:
 ```js
-roles.grantPermission('accountant', 'create account', { application: 'Accounting' });
-roles.grantPermission('clerk', 'print invoice', { application: 'Sales', country: 'Argentina' });
-roles.grantPermission('manager', ['create order', 'print order'], { application: 'Purchases', country: 'Australia' });
+roles.grantPermission('accountant', 'create account', 
+    { application: 'Accounting' });
+roles.grantPermission('clerk', 'print invoice', 
+    { application: 'Sales', country: 'Argentina' });
+roles.grantPermission('manager', ['create order', 'print order'], 
+    { application: 'Purchases', country: 'Australia' });
 ```
 
 Retrieve role granted permissions in a context:
