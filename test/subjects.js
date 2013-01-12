@@ -35,7 +35,7 @@ assert.equal(permissions.length, 2);
 assert.ok(permissions.indexOf('create account') >= 0);
 assert.ok(permissions.indexOf('delete account') >= 0);
 
-// Grant Already Existent Permissions
+// Grant Already Granted Permissions
 
 subjects.grantPermission('adam', 'delete account', context);
 
@@ -45,3 +45,25 @@ assert.ok(permissions);
 assert.equal(permissions.length, 2);
 assert.ok(permissions.indexOf('create account') >= 0);
 assert.ok(permissions.indexOf('delete account') >= 0);
+
+// Grant Permissions
+
+subjects.grantPermission('alice', ['create invoice', 'delete invoice'], context);
+
+var permissions = subjects.grantedPermissions('alice', context);
+
+assert.ok(permissions);
+assert.equal(permissions.length, 2);
+assert.ok(permissions.indexOf('create invoice') >= 0);
+assert.ok(permissions.indexOf('delete invoice') >= 0);
+
+// Grant Repeated Permissions
+
+subjects.grantPermission('albert', ['create invoice', 'delete invoice', 'create invoice', 'delete invoice'], context);
+
+var permissions = subjects.grantedPermissions('albert', context);
+
+assert.ok(permissions);
+assert.equal(permissions.length, 2);
+assert.ok(permissions.indexOf('create invoice') >= 0);
+assert.ok(permissions.indexOf('delete invoice') >= 0);
