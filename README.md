@@ -10,7 +10,9 @@ Permissions by Subject, Role, and Context. It uses an in-memory model.
 - Context: A set of values to describe the context where permissions and other attributes are assigned
 
 Source [Role-based access control](http://en.wikipedia.org/wiki/Role-based_access_control). The main difference is that
-`SimplePermissions` has contexts.
+`SimplePermissions` manages contexts: roles and permissions are assigned in context, i.e., a subject can have role
+`manager` in the context `{ application: 'Sales' }` and he/she can have role `user` in the context `{ application: 'Purchases' }`.
+A context can have many properties, i.e. `{ application: 'Sales', country: 'Argentina' }`.
 
 Subjects and Roles are identified by a simple (and unique) name. Permissions are simple strings. Contexts are simple objects
 with properties and their values.
