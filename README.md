@@ -115,6 +115,10 @@ TBD
 - Roles assigned to Subjects by Context
 - Permissions inherited by Context
 
+## Versions
+
+- 0.0.1: Published
+
 ## Contribution
 
 Feel free to [file issues](https://github.com/ajlopez/SimplePermissions) and submit
