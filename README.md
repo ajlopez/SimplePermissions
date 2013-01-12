@@ -53,7 +53,7 @@ subjects.grantPermission('albert', ['create order', 'print order'],
 
 Retrieve subject granted permissions in a context:
 ```js
-var permissions = subjects.grantedPermission('adam', { application: 'Accounting' });
+var permissions = subjects.grantedPermissions('adam', { application: 'Accounting' });
 permissions.forEach(function (permission) { console.log(permission); });
 ```
 
@@ -74,7 +74,7 @@ roles.grantPermission('manager', ['create order', 'print order'],
 
 Retrieve role granted permissions in a context:
 ```js
-var permissions = roles.grantedPermission('accountant', { application: 'Accounting' });
+var permissions = roles.grantedPermissions('accountant', { application: 'Accounting' });
 permissions.forEach(function (permission) { console.log(permission); });
 ```
 The returned value is an array with the permission values. If no permission was granted, the empty array `[]` is returned.
