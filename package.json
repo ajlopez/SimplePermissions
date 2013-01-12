@@ -1,7 +1,7 @@
 { "name": "simplepermissions"
 , "description": "Permissions by Subject, Role, and Context. Model in-memory"
 , "keywords": [ "role", "authorization", "permission", "claim", "user", "subject" ]
-, "version": "0.0.1"
+, "version": "0.0.2"
 , "author": "Angel 'Java' Lopez <webmaster@ajlopez.com> (http://www.ajlopez.com)"
 , "repository": { "type": "git", "url": "git://github.com/ajlopez/SimplePermissions.git" }
 , "main": "./lib/simplepermissions.js"
@@ -10,7 +10,6 @@
     "test": "node ./test.js"
   }
 , "dependencies": {
-    "simpleboard": "*"
   }
 , "devDependencies": {
   }
